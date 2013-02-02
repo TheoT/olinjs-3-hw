@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	h1=title
+	div
+		each order,i in orders
+			div(class='#{order.id}')
+				input(type="button", class='#{order.id}', onclick="deleteItem('#{order.id}');")
+				| Ingredients: 
+				each ing in order.ingredients
+					| #{ing.name},
+				

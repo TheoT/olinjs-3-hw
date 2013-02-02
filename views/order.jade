@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	h1=title
+	div
+		form(method='post', action='/orders','id="add_order")
+			each ingredient in ingredients
+				h3 #{ingredient.name} 
+				input(type='checkbox', name=ingredient.id, id="orderIngred")
+				h4 (Price #{ingredient.cost})
+			button(type='submit')
+				| Done
+

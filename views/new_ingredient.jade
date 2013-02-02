@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	h1 Add New Ingredient
+
+	form(method='post', action='/ingredient/create','id="add_ingredient")
+		h2 Name
+		input(name='add_ingredient',id="new_ingred") Ingredient Name
+		h2 Price
+		input(name='add_price',id="ingred_price") 
+		button(type='submit')
+			| Done
